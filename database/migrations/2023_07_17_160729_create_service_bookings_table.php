@@ -13,12 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
+        Schema::create('service_bookings', function (Blueprint $table) {
             $table->id();
-						$table->string('name');
-						$table->string('email')->unique();
-						$table->string('phone');
-						$table->string('password');
+						$table->unsignedBigInteger('service_id');
+						$table->foreign('service_id')->references('id')->on('services')->onDelete('cascade');
+						$table->unsignedBigInteger('booking_id');
+						$table->foreign('booking_id')->references('id')->on('bookings')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::dropIfExists('service_bookings');
     }
 };
