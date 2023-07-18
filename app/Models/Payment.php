@@ -12,4 +12,8 @@ class Payment extends Model
 		protected $fillable = [
 			'id', 'booking_id', 'status', 'name'
 		];
+
+		public function booking(){
+			return $this->belongsTo(Booking::class);
+		}
 }

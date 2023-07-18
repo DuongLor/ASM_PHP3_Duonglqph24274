@@ -7,9 +7,17 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomAmenity extends Model
 {
-    use HasFactory;
-		protected $table = 'room_amenities';
-		protected $fillable = [
-			'id', 'room_id', 'amenity_id',
-		];
+	use HasFactory;
+	protected $table = 'room_amenities';
+	protected $fillable = [
+		'id', 'room_id', 'amenity_id',
+	];
+	public function room()
+	{
+		return $this->belongsTo(Room::class);
+	}
+	public function amenity()
+	{
+		return $this->belongsTo(Amenity::class);
+	}
 }

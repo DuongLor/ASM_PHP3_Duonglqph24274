@@ -12,4 +12,7 @@ class Promotion extends Model
 		protected $fillable = [
 			'id', 'name', 'content', 'start_date', 'end_date',
 		];
+		public function rooms(){
+			return $this->belongsToMany(Room::class,'room_promotions','promotion_id','room_id');
+		}
 }

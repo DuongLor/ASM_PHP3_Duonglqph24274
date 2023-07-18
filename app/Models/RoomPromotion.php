@@ -12,4 +12,10 @@ class RoomPromotion extends Model
 		protected $fillable = [
 			'id', 'room_id', 'promotion_id','discount',
 		];
+		public function room(){
+			return $this->belongsTo(Room::class);
+		}
+		public function promotion(){
+			return $this->belongsTo(Promotion::class);
+		}
 }
