@@ -19,6 +19,7 @@ return new class extends Migration
 						$table->string('address');
 						$table->integer('stars');
             $table->timestamps();
+						$table->softDeletes();
         });
     }
 

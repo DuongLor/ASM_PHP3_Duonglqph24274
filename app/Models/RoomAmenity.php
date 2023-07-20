@@ -2,12 +2,13 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class RoomAmenity extends Model
 {
-	use HasFactory;
+	use HasFactory, SoftDeletes;
 	protected $table = 'room_amenities';
 	protected $fillable = [
 		'id', 'room_id', 'amenity_id',
