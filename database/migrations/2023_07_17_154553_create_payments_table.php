@@ -16,7 +16,6 @@ return new class extends Migration
 		Schema::create('payments', function (Blueprint $table) {
 			$table->id();
 			$table->unsignedBigInteger('booking_id');
-			$table->foreign('booking_id')->references('id')->on('bookings')->onDelete('cascade');
 			$table->string('name');
 			$table->enum('status', ['checking', 'complete'])->default('checking');
 			$table->timestamps();
