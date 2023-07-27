@@ -13,12 +13,12 @@ return new class extends Migration
 	 */
 	public function up()
 	{
-		Schema::create('room_promotions', function (Blueprint $table) {
+		Schema::create('roles', function (Blueprint $table) {
 			$table->id();
-			$table->unsignedBigInteger('room_id');
-			$table->unsignedBigInteger('promotion_id');
-			$table->decimal('discount', 10, 0);
+			$table->unsignedBigInteger('user_id');
+			$table->string('name');
 			$table->timestamps();
+			$table->softDeletes();
 		});
 	}
 
@@ -29,6 +29,6 @@ return new class extends Migration
 	 */
 	public function down()
 	{
-		Schema::dropIfExists('room_promotions');
+		Schema::dropIfExists('roles');
 	}
 };

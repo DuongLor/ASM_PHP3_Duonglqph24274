@@ -10,11 +10,9 @@
             padding: 5px;
             margin-top: 10px;
         }
-
         .fade-in {
             animation: fadeIn 0.5s;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
