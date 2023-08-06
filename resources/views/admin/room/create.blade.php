@@ -27,7 +27,11 @@
                 </div>
                 <div class="form-group pb-2 align-items-center">
                     <label class="mr-2 my-2"><i class="fas "></i> Giá phòng</label>
-                    <input type="number" class="form-control" placeholder="Nhập tên" name="price">
+                    <input type="number" class="form-control" placeholder="Nhập Giá" name="price">
+                </div>
+                <div class="form-group pb-2 align-items-center">
+                    <label class="mr-2 my-2"><i class="fas "></i> Chi tiết</label>
+                    <input type="text" class="form-control" placeholder="Nhập Chi tiết" name="description">
                 </div>
             </div>
         </div>

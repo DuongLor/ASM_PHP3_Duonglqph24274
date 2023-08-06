@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item py-1 ">
-                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Trang chủ</a>
                 </li>
                 <li class="nav-item py-1 ">
                     <a class="nav-link" href="#"></a>
@@ -57,12 +57,6 @@
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="{{ route('review.index') }}">
-                            <span class="" data-feather="bar-chart-2"></span>
-                            Đánh giá
-                        </a>
-                    </li>
-                    <li class="nav-item py-1 ">
                         <a class="nav-link" href="{{ route('imageRoom.index') }}">
                             <span class="" data-feather="layers"></span>
                             Hình ảnh phòng
@@ -81,9 +75,15 @@
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="{{ route('payment.index') }}">
+                        <a class="nav-link" href="{{ route('promotion.index') }}">
                             <span class="" data-feather="file"></span>
-                            Thanh toán
+                            Khuyến mại
+                        </a>
+                    </li>
+                    <li class="nav-item py-1 ">
+                        <a class="nav-link" href="{{ route('banner.index') }}">
+                            <span class="" data-feather="file"></span>
+                            Banner Maketing
                         </a>
                     </li>
                 </ul>

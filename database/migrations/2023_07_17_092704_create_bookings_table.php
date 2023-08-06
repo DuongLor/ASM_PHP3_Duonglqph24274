@@ -17,11 +17,12 @@ return new class extends Migration
 			$table->id();
 			$table->unsignedBigInteger('user_id');
 			$table->unsignedBigInteger('room_id');
+			$table->decimal('price', 10, 0);
+			$table->decimal('discount', 10, 0);
 			$table->date('start_date')->nullable();
 			$table->date('end_date')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
-
 		});
 	}
 

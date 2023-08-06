@@ -19,6 +19,8 @@ return new class extends Migration
 			$table->unsignedBigInteger('type_id');
 			$table->string('name');
 			$table->decimal('price', 10, 0);
+			$table->text('description')->nullable();
+			$table->unsignedBigInteger('promotion_id')->nullable();
 			$table->timestamps();
 			$table->softDeletes();
 

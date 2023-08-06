@@ -12,6 +12,8 @@
                 <th scope="col" class="text-center font-weight-bold">Loại phòng</th>
                 <th scope="col" class="text-center font-weight-bold">Tên</th>
                 <th scope="col" class="text-center font-weight-bold">Giá</th>
+                <th scope="col" class="text-center font-weight-bold">Chi tiết</th>
+                <th scope="col" class="text-center font-weight-bold">Khuyến mại</th>
                 <th scope="col" class="text-center font-weight-bold">Hành động</th>
             </tr>
         </thead>
@@ -20,9 +22,17 @@
                 <tr class="table-light">
                     <th scope="row" class="text-center">{{ $key + 1 }}</th>
                     <td class="text-center">{{ $room->hotel->name }}</td>
-										<td class="text-center">{{ $room->type->name }}</td>
-										<td class="text-center">{{ $room->name }}</td>
-										<td class="text-center">{{ $room->price }}</td>
+                    <td class="text-center">{{ $room->type->name }}</td>
+                    <td class="text-center">{{ $room->name }}</td>
+                    <td class="text-center">{{ $room->price }}</td>
+                    <td class="text-center">{{ $room->description }}</td>
+                    <td class="text-center">
+                        @if ($room->promotion != null)
+                            {{ $room->promotion->price }}
+                        @else
+                            0
+                        @endif
+                    </td>
                     <td class="text-center">
                         <a href="{{ route('room.edit', $room->id) }}" class="btn btn-info"><i
                                 class="fa-solid fa-pen-to-square"></i></a>

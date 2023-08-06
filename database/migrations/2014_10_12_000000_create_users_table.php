@@ -21,6 +21,7 @@ return new class extends Migration
 			$table->string('password');
 			$table->string('thumbnail')->nullable();
 			$table->string('token')->nullable();
+			$table->integer('role')->default(1);
 			$table->rememberToken();
 			$table->timestamps();
 			$table->softDeletes();

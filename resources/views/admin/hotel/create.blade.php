@@ -56,7 +56,7 @@
             <label>Ảnh</label>
             <input type="file" name="image" class="form-control" id="image">
         </div>
-        <div id="preview">
+        <div id="preview" class="">
         </div>
         <hr>
         <button type="submit" class="btn btn-success btn-block">Thêm</button>
