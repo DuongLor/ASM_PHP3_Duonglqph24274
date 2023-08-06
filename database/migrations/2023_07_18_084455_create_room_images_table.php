@@ -18,6 +18,7 @@ return new class extends Migration
 						$table->unsignedBigInteger('room_id');
 						$table->text('image');
             $table->timestamps();
+						$table->softDeletes();
         });
     }
 

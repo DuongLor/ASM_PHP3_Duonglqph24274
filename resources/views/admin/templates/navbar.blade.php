@@ -8,7 +8,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item py-1 ">
-                    <a class="nav-link active" aria-current="page" href="#">Trang chủ</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home') }}">Trang chủ</a>
                 </li>
                 <li class="nav-item py-1 ">
                     <a class="nav-link" href="#"></a>
@@ -28,68 +28,62 @@
                 <ul class="nav flex-column">
                     <li class="nav-item py-1 ">
                         <a class="nav-link active" aria-current="page" href="#">
-                            <span data-feather="home"></span>
+                            <span class="" data-feather="home"></span>
                             Trang điều khiển
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
                         <a class="nav-link" href="{{ route('hotel.index') }}">
-                            <span data-feather="file"></span>
+                            <span class="" data-feather="file"></span>
                             Khách sạn
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
+                        <a class="nav-link" href="{{ route('room.index') }}">
+                            <span class="" data-feather="file"></span>
                             Phòng
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
                         <a class="nav-link" href="{{ route('type.index') }}">
-                            <span data-feather="file"></span>
+                            <span class="" data-feather="file"></span>
                             Loại phòng
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="shopping-cart"></span>
-                            Tiện nghi
-                        </a>
-                    </li>
-                    <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="users"></span>
+                        <a class="nav-link" href="{{ route('user.index') }}">
+                            <span class="" data-feather="users"></span>
                             Khách hàng
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="bar-chart-2"></span>
-                            Đánh giá
+                        <a class="nav-link" href="{{ route('imageRoom.index') }}">
+                            <span class="" data-feather="layers"></span>
+                            Hình ảnh phòng
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="layers"></span>
-                            Hình ảnh
+                        <a class="nav-link" href="{{ route('imageHotel.index') }}">
+                            <span class="" data-feather="layers"></span>
+                            Hình ảnh khách sạn
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
+                        <a class="nav-link" href="{{ route('booking.index') }}">
+                            <span class="" data-feather="file"></span>
                             Đặt phòng
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
-                            Thanh toán
+                        <a class="nav-link" href="{{ route('promotion.index') }}">
+                            <span class="" data-feather="file"></span>
+                            Khuyến mại
                         </a>
                     </li>
                     <li class="nav-item py-1 ">
-                        <a class="nav-link" href="#">
-                            <span data-feather="file"></span>
-                            Dịch vụ
+                        <a class="nav-link" href="{{ route('banner.index') }}">
+                            <span class="" data-feather="file"></span>
+                            Banner Maketing
                         </a>
                     </li>
                 </ul>

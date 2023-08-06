@@ -30,6 +30,9 @@ class HotelController extends Controller
 			$hotel->stars = $request->stars;
 			$hotel->save();
 			if ($request->hasFile('image') && $request->file('image')->isValid()) {
+				$request->validate([
+					'image' => 'required|image',
+				]);
 				$hotel_image = uploadFile('hinh', $request->file('image'));
 				$hotel->hotelImages()->create([
 					'hotel_id' => $hotel->id,
@@ -61,6 +64,9 @@ class HotelController extends Controller
 		}
 		$hotel->save();
 		if ($request->hasFile('image') && $request->file('image')->isValid()) {
+			$request->validate([
+				'image' => 'required|image',
+			]);
 			$hotel_image = uploadFile('hinh', $request->file('image'));
 			$hotel->hotelImages()->create([
 				'hotel_id' => $hotel->id,
